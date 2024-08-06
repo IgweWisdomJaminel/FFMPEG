@@ -11,10 +11,7 @@ import org.springframework.batch.core.launch.JobLauncher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -39,6 +36,11 @@ public class VideoController {
     @Autowired
     private Job videoMergeJob;
 
+
+    @GetMapping("/greetings")
+    public String greetings (){
+        return "Weclome";
+    }
     @PostMapping("/merge")
     public ResponseEntity<String> mergeVideos(@RequestParam("videos") List<MultipartFile> videos) {
         if (videos.size() != 3) {
@@ -131,6 +133,8 @@ public class VideoController {
             }
         }
     }
+
+
 
     private File saveFile(MultipartFile multipartFile, File directory) throws IOException {
         File file = new File(directory, multipartFile.getOriginalFilename());
