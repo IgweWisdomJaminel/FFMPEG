@@ -1,7 +1,3 @@
-Sure! Below is the Git description formatted as a README file:
-
----
-
 # FFMPEG Video Processing Application
 
 This project is a Spring Boot application designed to handle video processing tasks, specifically merging video files using FFMPEG. It provides an API to upload and merge exactly three video files into a single output file.
@@ -80,5 +76,3 @@ Feel free to fork the repository and submit pull requests. For major changes, pl
 This project is licensed under the Apache License. See the `LICENSE` file for more details.
 
 ---
-
-Copy and paste the above content into a `README.md` file in your repository. Adjust the repository URL and any specific details as necessary.
