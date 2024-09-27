@@ -26,6 +26,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/video")
+    //Controller Vid input
 public class VideoController {
 
     private static final Logger logger = LoggerFactory.getLogger(VideoController.class);
